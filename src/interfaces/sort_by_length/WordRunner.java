@@ -10,21 +10,14 @@ public class WordRunner
 {
 	public static void main( String args[] ) throws IOException
 	{
+		//Scan the file - change with absolute file path
 		Scanner file = new Scanner(new File("words.dat"));
 
+		//Get the file size
 		int size = file.nextInt();
+
+		//TODO: Finish this to collect the data and print the results
 		file.nextLine();
-		
-
-
-
-
-
-
-
-
-
-
 
 	}
 }
