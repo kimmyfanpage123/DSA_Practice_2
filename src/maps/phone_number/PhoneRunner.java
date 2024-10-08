@@ -1,4 +1,4 @@
-package maps.PhoneNumber;//(c) A+ Computer Science
+package maps.phone_number;//(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
 
