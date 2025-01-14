@@ -235,6 +235,7 @@ public class DoublyLinkedList {
         ll.print();
         System.out.println(ll.search(2));
     }
+
 	/*
     3 2 1
     size : 3
@@ -256,6 +257,7 @@ public class DoublyLinkedList {
         ll.removeDuplicate();
         ll.print();
     }
+
 	/*
 	1 2 3
 	1 1 2 2 3 3
@@ -274,6 +276,7 @@ public class DoublyLinkedList {
         DoublyLinkedList l3 = ll.copyListReversed();
         l3.print();
     }
+
 	/*
 	3 2 1
 	3 2 1
@@ -290,6 +293,7 @@ public class DoublyLinkedList {
         ll.removeNode(2);
         ll.print();
     }
+
 	/*
 	3 2 1
 	3 1
@@ -304,6 +308,7 @@ public class DoublyLinkedList {
         ll.reverseList();
         ll.print();
     }
+
 	/*
 	3 2 1
 	1 2 3
