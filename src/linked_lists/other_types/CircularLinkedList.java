@@ -66,8 +66,11 @@ public class CircularLinkedList {
         }
 
         // TODO 3: Complete the method below this comment.
-        // Set the value
-
+        // Store the value to the node after the tail
+        // Test if there is only one node (tail is the head)
+        // Otherwise, set the head to the node after the head (two nodes after the tail)
+        // Decrease the size
+        // Return the value
         return 0;
     }
 
