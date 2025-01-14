@@ -14,9 +14,13 @@ public class ListFunHouseTwo
 
     public void add(Comparable data)
     {
-        ListNode newNode = new ListNode(data, null);
         if (theList == null){
             theList.setValue(data);
+            theList.setNext(null);
+        }
+        else{
+            theList.setValue(data);
+            theList.setNext(theList);
         }
     }
 
