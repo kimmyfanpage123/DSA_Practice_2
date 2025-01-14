@@ -50,6 +50,10 @@ public class DoublyLinkedList {
         Node newNode = new Node(value, null, null);
         // TODO 1: Complete the method below this comment.
 
+        // Test if list is empty
+        // Otherwise, update the nodes
+        // Increase the size
+
     }
 
     public void addTail(int value) {
