@@ -62,6 +62,18 @@ public class DoublyLinkedList {
 
     }
 
+    /**
+     * Removes the nth node from the list.
+     * @param n index of the node
+     * @return whether the operation was successful
+     */
+    public boolean removeNthNode(int n) {
+
+
+
+        return false;
+    }
+
     public int removeHead() {
         if (isEmpty())
             throw new IllegalStateException("EmptyListException");
