@@ -63,7 +63,7 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Removes the nth node from the list.
+     * Removes the nth node from the end list.
      * @param n index of the node
      * @return whether the operation was successful
      */
