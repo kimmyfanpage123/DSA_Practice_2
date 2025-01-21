@@ -30,7 +30,7 @@ public class ListLabs5 {
         head = new ListNode(-9, head);
         head = new ListNode(22, head);
 
-        System.out.printf("Expected: false\nActual:   %b", isCircular(head));
+        System.out.printf("\nExpected: false\nActual:   %b", isCircular(head));
 
         ListNode head2 = new ListNode(-16, null);
         ListNode first = head2;
@@ -40,7 +40,7 @@ public class ListLabs5 {
         head2 = new ListNode(4, head2);
         first.setNext(head2);
 
-        System.out.printf("Expected: true\nActual:   %b", isCircular(head2));
+        System.out.printf("\nExpected: true\nActual:   %b", isCircular(head2));
     }
 
     /**
