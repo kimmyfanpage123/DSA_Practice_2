@@ -16,6 +16,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/number_systems" />
       <excludeFolder url="file://$MODULE_DIR$/src/queues" />
       <excludeFolder url="file://$MODULE_DIR$/src/sets" />
+      <excludeFolder url="file://$MODULE_DIR$/src/stacks" />
+      <excludeFolder url="file://$MODULE_DIR$/src/linked_lists" />
     </content>
     <orderEntry type="jdk" jdkName="22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

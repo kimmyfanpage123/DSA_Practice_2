@@ -67,11 +67,19 @@ public class CircularLinkedList {
 
         // TODO 3: Complete the method below this comment.
         // Store the value to the node after the tail
+        Node head = tail.next;
         // Test if there is only one node (tail is the head)
+        if (tail == head){
+            tail = null;
+        }
         // Otherwise, set the head to the node after the head (two nodes after the tail)
+        else{
+            tail.next = head.next;
+        }
         // Decrease the size
+        size--;
         // Return the value
-        return 0;
+        return head.value;
     }
 
     public boolean removeNode(int key) {

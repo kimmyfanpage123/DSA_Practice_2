@@ -9,7 +9,7 @@ public class BSTreeRunner
 {
    public static void main( String args[] )
    {
-      /*BinarySearchTree tree = new BinarySearchTree();
+      BinarySearchTree tree = new BinarySearchTree();
 
       tree.add(90);
       tree.add(100);
@@ -42,7 +42,7 @@ public class BSTreeRunner
 
       out.println(tree.isFull()?"\nThe tree is full.":"\nThe tree is not full.");
 
-      out.println("\n\n\nBONUS SECTION");
+     /* out.println("\n\n\nBONUS SECTION");
 
       out.println(tree.search(100)?"The tree contains 100!":"The does not contain 100!");
 
@@ -81,6 +81,8 @@ public class BSTreeRunner
 
       tree.remove(100);
       out.println("\nTree after removing 100.");
-      tree.levelOrder();*/
+      tree.levelOrder();
+
+       */
    }
 }

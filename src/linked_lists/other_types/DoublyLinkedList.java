@@ -51,15 +51,32 @@ public class DoublyLinkedList {
         // TODO 1: Complete the method below this comment.
 
         // Test if list is empty
+        if (size == 0){
+            head = newNode;
+            tail = newNode;
+        }
         // Otherwise, update the nodes
+        else{
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
         // Increase the size
-
+        size++;
     }
 
     public void addTail(int value) {
         Node newNode = new Node(value, null, null);
         // TODO 2: Complete the method below this comment.
-
+        if (isEmpty()){
+            tail = head = newNode;
+        }
+        else{
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+        size++;
     }
 
     /**
@@ -68,8 +85,23 @@ public class DoublyLinkedList {
      * @return whether the operation was successful
      */
     public boolean removeNthNode(int n) {
+        Node current = tail;
+        int distanceTraversed = 1;
 
+        while (current != null){
+            if (distanceTraversed == n){
+                Node a = current.prev;
+                Node b = current;
+                Node c = current.next;
+                a.next = c;
+                c.prev = a;
 
+                size--;
+                return true;
+            }
+            current = current.prev;
+            distanceTraversed++;
+        }
 
         return false;
     }

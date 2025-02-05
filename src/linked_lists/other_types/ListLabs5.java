@@ -2,6 +2,8 @@ package linked_lists.other_types;
 
 import linked_lists.instance_variables.ListNode;
 
+import java.util.*;
+
 public class ListLabs5 {
     public static void main(String[] args) {
 
@@ -49,7 +51,16 @@ public class ListLabs5 {
      * @return whether the list is circular
      */
     public static boolean isCircular(ListNode head) {
-        return false;
+       Set<Comparable> nodes = new HashSet<>();
+       while (head != null){
+           if (nodes.contains(head.getValue())){
+               return true;
+           }
+           nodes.add(head.getValue());
+           head = head.getNext();
+       }
+       return false;
+
     }
 
 }
