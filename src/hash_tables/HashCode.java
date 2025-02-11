@@ -7,19 +7,19 @@ public class HashCode
 {
   public static void main ( String[] args )
   {
-		Character c = new Character('a');
+		Character c = 'a';
 		System.out.println(c.hashCode());
 		
-		c = new Character('0');
+		c = '0';
 		System.out.println(c.hashCode());
 		
-		c = new Character('A');
+		c = 'A';
 		System.out.println(c.hashCode());     
 		
 		Integer num = 45;		//autoboxing
 		System.out.println(num.hashCode());
 		
-		num = new Integer(101);		//boxing up the int the long way
+		num = Integer.valueOf(101);		//boxing up the int the long way
 		System.out.println(num.hashCode());  
 		
 		String s = "a";		
