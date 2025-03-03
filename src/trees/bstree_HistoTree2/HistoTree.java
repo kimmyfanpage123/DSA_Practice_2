@@ -21,16 +21,19 @@ public class HistoTree
 		}
 		else{
 			TreeNode found = search(data);
+			ThingCount thing = (ThingCount)found.getValue();
+			thing.setCount(thing.getCount() + 1);
 		}
 	}
 
 	private TreeNode add(Comparable data, TreeNode tree)
 	{
 		if (tree == null){
-			return new TreeNode(data, null, null);
+			ThingCount thing = new ThingCount(data, 1);
+			return new TreeNode(thing, null, null);
 		}
 		else{
-			int dirTest = data.compareTo(tree.getValue());
+			int dirTest = data.compareTo(((ThingCount)tree.getValue()).getThing());
 
 			// add the node
 			if (dirTest < 0){
@@ -54,20 +57,17 @@ public class HistoTree
 			return null;
 		}
 
-		int dirTest = data.compareTo(tree.getValue());
+		int dirTest = data.compareTo(((ThingCount)tree.getValue()).getThing());
 
 		if(dirTest == 0){
 			return tree;
 		}
 		else if (dirTest < 0){
-			search(data, tree.getLeft());
+			return search(data, tree.getLeft());
 		}
 		else{
-			search(data, tree.getRight());
+			return search(data, tree.getRight());
 		}
-
-
-		return null;
 	}
 
 	public String toString()

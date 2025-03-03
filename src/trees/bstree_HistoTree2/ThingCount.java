@@ -52,15 +52,10 @@ public class ThingCount implements Comparable
 	public int compareTo(Object obj)
 	{
 		ThingCount other = (ThingCount)obj;
-		if (count < other.getCount()){
-			return -1;
+		if (other != null){
+			return ((Comparable)getThing()).compareTo(other.getThing());
 		}
-		else if (count == other.getCount()){
-			return 0;
-		}
-		else{
-			return 1;
-		}
+		return -1;
 	}
 	
 	public String toString()
