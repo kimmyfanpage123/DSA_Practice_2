@@ -3,9 +3,9 @@ import java.util.*;
 
 
 public class HashMap implements Map{
-    private ArrayList<HashSet<Object>> map;
+    private ArrayList<HashSet<Integer>> map;
     private HashSet<Integer> keys;
-    private HashSet<Object> values;
+    private HashSet<Integer> values;
     public HashMap() {
         map = new ArrayList<>();
         keys = new HashSet<>();
@@ -39,8 +39,16 @@ public class HashMap implements Map{
 
     @Override
     public boolean containsKey(Object key) {
-        for (int i = 0; i < map.size(); i++){
+        /*for (int i = 0; i < map.size(); i++){
             if (map.get(i) != null && map.get(i) == key){
+                return true;
+            }
+        }
+        return false;
+
+         */
+        for (Integer k : keys){
+            if (k == ((Integer) key)){
                 return true;
             }
         }
@@ -50,10 +58,18 @@ public class HashMap implements Map{
 
     @Override
     public boolean containsValue(Object value) {
-        HashMapHelper val = new HashMapHelper((Integer) value);
-        for (int i = 0; i < map.size(); i++){
+        //HashMapHelper val = new HashMapHelper((Integer) value);
+        /*for (int i = 0; i < map.size(); i++){
             HashSet set = map.get(i);
-            if (set.contains(val)){
+            if (set.contains((Integer) value)){
+                return true;
+            }
+        }
+        return false;
+
+         */
+        for (Integer val : values){
+            if (val == ((Integer) value)){
                 return true;
             }
         }
@@ -73,9 +89,9 @@ public class HashMap implements Map{
             HashSet set = map.get((Integer) key);
             set = new HashSet<>();
         }
-        map.get((Integer)key).add(value);
+        map.get((Integer)key).add((Integer)value);
         keys.add((Integer)key);
-        values.add(value);
+        values.add((Integer)value);
         return value;
     }
 
@@ -83,14 +99,16 @@ public class HashMap implements Map{
     @Override
     public Object remove(Object key) {
         map.get((Integer) key).clear();
-        map.remove((Integer) key);
+        keys.remove((Integer) key);
         return key;
     }
 
 
     @Override
     public void putAll(Map m) {
-
+        for (Object key : m.keySet()){
+            put(key, m.get(key));
+        }
     }
 
 
@@ -116,6 +134,11 @@ public class HashMap implements Map{
 
     @Override
     public Set<Entry> entrySet() {
+        Set<Entry> mappings = new HashSet<>();
+        for (Object key: keySet()){
+            Map.Entry<Integer, HashSet<Integer>> pair = Map.entry((Integer) key, map.get((Integer) key));
+            mappings.add(pair);
+        }
         return null;
     }
 

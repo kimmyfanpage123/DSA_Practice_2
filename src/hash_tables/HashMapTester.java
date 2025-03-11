@@ -19,8 +19,8 @@ public class HashMapTester {
         System.out.println(map);
         System.out.println(map.isEmpty()); // returns false
         System.out.println(map.containsValue(7)); // returns true
-        System.out.println(map.keySet());
-        System.out.println(map.values());
+        System.out.println(map.keySet()); // returns [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        System.out.println(map.values()); // returns all values in the file but without duplicates
 //        }
 //        catch(Exception e)
 //        {

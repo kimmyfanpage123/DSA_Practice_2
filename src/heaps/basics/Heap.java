@@ -47,9 +47,7 @@ public class Heap
 	{
 		list.set(0,list.get(list.size()-1));
 		list.remove(list.size()-1);
-		if (list.isEmpty()) {
-			swapDown(list.size());
-		}
+		swapDown(0);
 	}
 
 

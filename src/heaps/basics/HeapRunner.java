@@ -10,7 +10,7 @@ public class HeapRunner
 		Heap heap = new Heap();
 
 		heap.add(1);
-		heap.add(2);
+  		heap.add(2);
 		heap.add(8);
 		heap.add(9);
 		heap.add(10);
