@@ -1,43 +1,46 @@
 package hash_tables;//(c) A+ Computer Science
 //www.apluscompsci.com
 
+
 //Name -
 
+
 import java.util.LinkedList;
+
 
 public class HashTable
 {
 	private LinkedList[] table;
+
 
 	public HashTable( )
 	{
 		table = new LinkedList[10];
 	}
 
+
 	public void add(Object obj)
 	{
-		System.out.println("add");
 		int i = obj.hashCode();
-
-
-
-
-
+		if (table[i] == null){
+			table[i] = new LinkedList();
+		}
+		if (!table[i].contains(obj)) {
+			table[i].add(obj); }
 	}
+
 
 	public String toString()
 	{
 		String output="HASHTABLE\n";
-
-
-
-
-
-
-
-
-
-
+		for (int i = 0; i < table.length; i++){
+			if (table[i] == null){
+				output += "bucket " + i + " " + "\n";
+			}
+			else{
+				output += "bucket " + i + " " + table[i] + "\n";
+			}
+		}
 		return output;
 	}
 }

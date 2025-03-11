@@ -18,6 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/sets" />
       <excludeFolder url="file://$MODULE_DIR$/src/stacks" />
       <excludeFolder url="file://$MODULE_DIR$/src/linked_lists" />
+      <excludeFolder url="file://$MODULE_DIR$/src/trees" />
     </content>
     <orderEntry type="jdk" jdkName="22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
