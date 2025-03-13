@@ -1,14 +1,12 @@
 package heaps;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class heapApplications {
 
     public static void main(String[] args) {
         testPracticeOne();
+        testPracticeTwo();
     }
 
     // Java program to find k most frequent element
@@ -47,6 +45,64 @@ public class heapApplications {
         // store the result as an ArrayList<Integer>
 
         // reverse the result and return
+
+        return null;
+    }
+
+    public static void testPracticeTwo()
+    {
+        int[][] arr = { { 2, 6, 12 },
+                { 1, 9 },
+                { 23, 34, 90, 2000 } };
+        System.out.println(
+                mergeKArrays(arr, arr.length)
+                        .toString());
+    }
+
+    private static class HeapNode
+            implements Comparable<HeapNode> {
+        int x;
+        int y;
+        int value;
+
+        HeapNode(int x, int y, int value)
+        {
+            this.x = x;
+            this.y = y;
+            this.value = value;
+        }
+
+        @Override public int compareTo(HeapNode hn)
+        {
+            if (this.value <= hn.value) {
+                return -1;
+            }
+            else {
+                return 1;
+            }
+        }
+    }
+
+    // Function to merge k sorted arrays.
+    public static ArrayList<Integer>
+    mergeKArrays(int[][] arr, int K)
+    {
+        // Create a result ArrayList<Integer> and Min-Heap
+
+        // Initially add only first column of elements. First
+        // element of every array
+
+
+        // Create a variable to hold the current HeapNode
+
+
+        // Iterate until the heap is empty
+
+            // Add the values to the result
+
+
+            // Check if next element of curr min exists,
+            // then add that to heap.
 
         return null;
     }
