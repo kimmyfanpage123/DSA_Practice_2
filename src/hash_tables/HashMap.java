@@ -30,10 +30,12 @@ public class HashMap implements Map{
 
     @Override
     public boolean isEmpty() {
-        if (map.isEmpty()){
-            return true;
+        for (int i = 0; i < map.size(); i++){
+            if (!map.get(i).isEmpty()){
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
 
@@ -77,6 +79,7 @@ public class HashMap implements Map{
     }
 
     // i shouldve asked about this.
+    // not tested
     @Override
     public Object get(Object key) {
         return key;
@@ -109,6 +112,7 @@ public class HashMap implements Map{
     }
 
 
+    // not tested
     @Override
     public void putAll(Map m) {
         for (Object key : m.keySet()){
@@ -135,6 +139,7 @@ public class HashMap implements Map{
     public Collection values() {
         return values;
     }
+
 
 
     @Override

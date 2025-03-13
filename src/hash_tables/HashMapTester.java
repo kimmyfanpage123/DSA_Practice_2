@@ -22,6 +22,7 @@ public class HashMapTester {
         System.out.println(map.containsValue(7)); // returns true
         System.out.println(map.keySet()); // returns [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         System.out.println(map.values()); // returns all values in the file but without duplicates
+        System.out.println(map.entrySet()); // returns some mess ig
 
         System.out.println(map.remove(0)); // returns 0;
         System.out.println(map.size()); // returns 9
