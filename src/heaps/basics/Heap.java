@@ -47,7 +47,7 @@ public class Heap
 	{
 		list.set(0,list.get(list.size()-1));
 		list.remove(list.size()-1);
-		swapDown(0);
+		swapDown(list.size());
 	}
 
 
@@ -85,7 +85,6 @@ public class Heap
 				break;
 			}
 		}
-
 	}
 
 

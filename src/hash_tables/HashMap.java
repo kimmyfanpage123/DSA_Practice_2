@@ -20,7 +20,7 @@ public class HashMap implements Map{
     public int size() {
         int count = 0;
         for (int i = 0; i < map.size(); i++){
-            if (map.get(i) != null){
+            if (!map.get(i).isEmpty()){
                 count++;
             }
         }
@@ -76,7 +76,7 @@ public class HashMap implements Map{
         return false;
     }
 
-
+    // i shouldve asked about this.
     @Override
     public Object get(Object key) {
         return key;
@@ -98,6 +98,11 @@ public class HashMap implements Map{
 
     @Override
     public Object remove(Object key) {
+        for (Integer val : map.get((Integer) key)){
+            if (values.contains(val)){
+                values.remove(val);
+            }
+        }
         map.get((Integer) key).clear();
         keys.remove((Integer) key);
         return key;
