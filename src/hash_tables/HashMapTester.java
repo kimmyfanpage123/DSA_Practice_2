@@ -2,6 +2,7 @@ package hash_tables;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Map;
 
 public class HashMapTester {
     public static void main ( String[] args ) throws FileNotFoundException {
@@ -22,6 +23,7 @@ public class HashMapTester {
         System.out.println(map.containsValue(7)); // returns true
         System.out.println(map.keySet()); // returns [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         System.out.println(map.values()); // returns all values in the file but without duplicates
+        System.out.println(map.get(0)); // idk what to do about this
         System.out.println(map.entrySet()); // returns some mess ig
 
         System.out.println(map.remove(0)); // returns 0;
@@ -29,6 +31,13 @@ public class HashMapTester {
 
         map.clear();
         System.out.println(map.isEmpty()); // returns true;
+
+        Map<Integer, Integer> m = new java.util.HashMap<>();
+        m.put(0,10);
+        m.put(1, 31);
+        m.put(2, 22);
+        map.putAll(m);
+        System.out.println(map);
 //        }
 //        catch(Exception e)
 //        {

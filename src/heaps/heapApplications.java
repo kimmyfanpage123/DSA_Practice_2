@@ -38,16 +38,35 @@ public class heapApplications {
     // Function to find k numbers with most occurrences
     static ArrayList<Integer> topKFrequent(int[] arr, int k) {
         // HashMap 'mp' implemented as frequency hash table
+        Map<Integer, Integer> mp = new HashMap<>();
+        for (int val: arr){
+            mp.put(val, mp.getOrDefault(val, 0) + 1);
+        }
 
         // Priority queue (Min-Heap) with custom comparator
+        PriorityQueue<int[]> pq = new PriorityQueue<>(new Compare());
 
         // populate priority queue with top k frequencies
+        for (Integer key : mp.keySet()){
+            int[] curr = new int[2];
+            curr[0] = key;
+            curr[1] = mp.get(key);
+            pq.add(curr);
+            if (pq.size() > k){
+                pq.remove();
+            }
+        }
 
         // store the result as an ArrayList<Integer>
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int[] array : pq){
+            result.add(array[0]);
+        }
 
         // reverse the result and return
+        Collections.reverse(result);
 
-        return null;
+        return result;
     }
 
     public static void testPracticeTwo()

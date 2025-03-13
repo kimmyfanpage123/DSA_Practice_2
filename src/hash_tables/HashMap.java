@@ -82,7 +82,11 @@ public class HashMap implements Map{
     // not tested
     @Override
     public Object get(Object key) {
-        return key;
+        String result = "";
+        for (Integer val : map.get((Integer) key)){
+            result += val + " ";
+        }
+        return result;
     }
 
 
@@ -115,6 +119,7 @@ public class HashMap implements Map{
     // not tested
     @Override
     public void putAll(Map m) {
+        clear();
         for (Object key : m.keySet()){
             put(key, m.get(key));
         }
@@ -149,7 +154,7 @@ public class HashMap implements Map{
             Map.Entry<Integer, HashSet<Integer>> pair = Map.entry((Integer) key, map.get((Integer) key));
             mappings.add(pair);
         }
-        return null;
+        return mappings;
     }
 
     public String toString(){
