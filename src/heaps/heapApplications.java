@@ -6,6 +6,7 @@ public class heapApplications {
 
     public static void main(String[] args) {
         testPracticeOne();
+        System.out.println();
         testPracticeTwo();
     }
 
