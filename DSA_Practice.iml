@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/inheritance" />
       <excludeFolder url="file://$MODULE_DIR$/src/sort_search" />
+      <excludeFolder url="file://$MODULE_DIR$/src/graphs/graph_simple" />
     </content>
     <orderEntry type="jdk" jdkName="22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

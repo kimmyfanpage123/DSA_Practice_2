@@ -39,7 +39,7 @@ public class heapApplications {
     static ArrayList<Integer> topKFrequent(int[] arr, int k) {
         // HashMap 'mp' implemented as frequency hash table
 
-        // Priority queue (Min-Heap) with custom comparator
+        // Priority queue (Min-Heap) of int[] with custom comparator
 
         // populate priority queue with top k frequencies
 
