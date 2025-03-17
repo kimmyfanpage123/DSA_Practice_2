@@ -49,8 +49,8 @@ public class heapApplications {
         // populate priority queue with top k frequencies
         for (Integer key : mp.keySet()){
             int[] curr = new int[2];
-            curr[0] = key;
-            curr[1] = mp.get(key);
+            curr[1] = key;
+            curr[0] = mp.get(key);
             pq.add(curr);
             if (pq.size() > k){
                 pq.remove();
@@ -60,7 +60,7 @@ public class heapApplications {
         // store the result as an ArrayList<Integer>
         ArrayList<Integer> result = new ArrayList<>();
         for (int[] array : pq){
-            result.add(array[0]);
+            result.add(array[1]);
         }
 
         // reverse the result and return
@@ -108,22 +108,34 @@ public class heapApplications {
     mergeKArrays(int[][] arr, int K)
     {
         // Create a result ArrayList<Integer> and Min-Heap
+        ArrayList<Integer> result = new ArrayList<>();
+        PriorityQueue<HeapNode> minHeap = new PriorityQueue<>();
 
         // Initially add only first column of elements. First
         // element of every array
-
+        for (int i = 0; i < K; i++){
+            if (arr[i].length > 0){
+                minHeap.add(new HeapNode(i, 0, arr[i][0]));
+            }
+        }
 
         // Create a variable to hold the current HeapNode
-
+        HeapNode curr;
 
         // Iterate until the heap is empty
-
+        while (!minHeap.isEmpty()) {
             // Add the values to the result
-
+            curr = minHeap.peek();
+            minHeap.remove();
+            result.add(curr.value);
 
             // Check if next element of curr min exists,
             // then add that to heap.
-
-        return null;
+            if (curr.y + 1 < arr[curr.x].length){
+                int next = arr[curr.x][curr.y + 1];
+                minHeap.add(new HeapNode(curr.x, curr.y + 1, next));
+            }
+        }
+        return result;
     }
 }

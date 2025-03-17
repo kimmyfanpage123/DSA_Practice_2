@@ -19,6 +19,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/stacks" />
       <excludeFolder url="file://$MODULE_DIR$/src/linked_lists" />
       <excludeFolder url="file://$MODULE_DIR$/src/trees" />
+      <excludeFolder url="file://$MODULE_DIR$/src/hash_tables" />
     </content>
     <orderEntry type="jdk" jdkName="22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
