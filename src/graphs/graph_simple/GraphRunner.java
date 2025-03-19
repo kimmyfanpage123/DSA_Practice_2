@@ -24,7 +24,7 @@ public class GraphRunner
 			String stop = input.substring(1,2);
 
 			if(test.contains(start)&&test.contains(stop))
-			   test.check(input.substring(0,1),input.substring(1,2),"");
+			   test.check(input.substring(0,1),input.substring(1,2));
 
 			out.println(start + " CONNECTS TO " + stop + " == " + test);
 		}
