@@ -6,20 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/inheritance" />
       <excludeFolder url="file://$MODULE_DIR$/src/sort_search" />
-      <excludeFolder url="file://$MODULE_DIR$/src/abstract_classes" />
-      <excludeFolder url="file://$MODULE_DIR$/src/arraylists" />
-      <excludeFolder url="file://$MODULE_DIR$/src/bigO" />
-      <excludeFolder url="file://$MODULE_DIR$/src/interfaces" />
-      <excludeFolder url="file://$MODULE_DIR$/src/iterators" />
-      <excludeFolder url="file://$MODULE_DIR$/src/maps" />
-      <excludeFolder url="file://$MODULE_DIR$/src/multithreading" />
-      <excludeFolder url="file://$MODULE_DIR$/src/number_systems" />
-      <excludeFolder url="file://$MODULE_DIR$/src/queues" />
-      <excludeFolder url="file://$MODULE_DIR$/src/sets" />
-      <excludeFolder url="file://$MODULE_DIR$/src/stacks" />
-      <excludeFolder url="file://$MODULE_DIR$/src/linked_lists" />
-      <excludeFolder url="file://$MODULE_DIR$/src/trees" />
-      <excludeFolder url="file://$MODULE_DIR$/src/hash_tables" />
+      <excludeFolder url="file://$MODULE_DIR$/src/graphs/graph_simple" />
     </content>
     <orderEntry type="jdk" jdkName="22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
