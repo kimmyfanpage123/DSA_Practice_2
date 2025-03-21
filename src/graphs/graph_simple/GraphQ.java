@@ -20,9 +20,18 @@ public class GraphQ
 		{
 			String first = piece.substring(0,1);
 			String second = piece.substring(1,2);
+
+			if (map.get(first) == null){
+				map.put(first, "");
+			}
+			if (map.get(second) == null){
+				map.put(second, "");
+			}
 			
 			//add code to build the map / graph
-			
+			map.put(first, map.get(first)+second);
+			map.put(second, map.get(second)+first);
+
 		}
 		found = false;
 	}
@@ -40,12 +49,26 @@ public class GraphQ
             
         List<String> used = new LinkedList<String>();
 		
-		q.add( first );
+		q.add(first);
  
-        //loop throug the q if nodes remain to check
-        
-        	//check for stuff
-        	
+        //loop through the q if nodes remain to check
+        while (!q.isEmpty()) {
+			//check for stuff
+			String current = q.poll();
+
+			String[] letters = map.get(current).split("");
+
+			for (String neighbor : letters){
+				if (!used.contains(neighbor)){
+					used.add(neighbor);
+					if(neighbor.equals(second)){
+						found = true;
+						return;
+					}
+					q.add(neighbor);
+				}
+			}
+		}
     }
 
 	public String toString()
