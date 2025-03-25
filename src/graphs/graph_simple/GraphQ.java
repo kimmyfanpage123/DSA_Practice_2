@@ -40,7 +40,7 @@ public class GraphQ
 	{
 		if(map.get(letter)==null)
 	      return false;
-	   return true;
+	   	return true;
 	}
 
 	public void check(String first, String second)
