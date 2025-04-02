@@ -37,6 +37,7 @@ public class MazeQ
 				if (map.get(curr) == null){
 					map.put(curr, new TreeSet<>());
 				}
+
 				TreeSet currSet = map.get(curr);
 				if (i - 1 >= 0){
 					if (maze[i-1][j] == '.'){
