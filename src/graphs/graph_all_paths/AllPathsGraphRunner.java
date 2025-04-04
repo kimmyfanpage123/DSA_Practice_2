@@ -4,6 +4,7 @@ package graphs.graph_all_paths;//(c) A+ Computer Science
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AllPathsGraphRunner
@@ -15,7 +16,17 @@ public class AllPathsGraphRunner
 		file.nextLine();
 		for(int x=0; x<howManyTimes; x++)
 		{
-			//do some stuff
+			String input = file.nextLine();
+			AllPathsGraph test = new AllPathsGraph(input);
+
+			input = file.nextLine();
+
+			String start = input.substring(0,1);
+			String stop = input.substring(1,2);
+
+			test.check(start, stop, new ArrayList<>());
+
+			System.out.println(start + " to " + stop + " == " + test);
 		}
 	}
 }
