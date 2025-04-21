@@ -16,7 +16,7 @@ public class ConvertRunner
 {
 	public static void main(String[] args) throws IOException
 	{
-		Scanner file = new Scanner(new File("C:\\Users\\Steven Turner\\IdeaProjects\\DSA_Practice\\src\\number_systems\\ASCII_to_binary\\convert.dat"));
+		Scanner file = new Scanner(new File("C:/Users/559595/IdeaProjects/DSA_Practice_2/src/number_systems/ASCII_to_binary/convert.dat"));
 		while(file.hasNext())
 		{
 			String sentence = file.nextLine();

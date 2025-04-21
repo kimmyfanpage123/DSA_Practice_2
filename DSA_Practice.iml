@@ -16,7 +16,6 @@
       <excludeFolder url="file://$MODULE_DIR$/src/linked_lists" />
       <excludeFolder url="file://$MODULE_DIR$/src/maps" />
       <excludeFolder url="file://$MODULE_DIR$/src/multithreading" />
-      <excludeFolder url="file://$MODULE_DIR$/src/number_systems" />
       <excludeFolder url="file://$MODULE_DIR$/src/queues" />
       <excludeFolder url="file://$MODULE_DIR$/src/sets" />
       <excludeFolder url="file://$MODULE_DIR$/src/stacks" />
